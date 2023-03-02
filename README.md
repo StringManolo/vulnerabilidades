@@ -17,6 +17,6 @@ Here is an example of what the injected HTML code might look like:
 </form>
 ```
 
-In this example, the attacker has injected a <form> tag that looks like a legitimate login form. The form is set up to submit the entered username and password to the attacker's website (http://attacker.com/steal) when the user clicks the "Login" button.  
+In this example, the attacker has injected a ```<form>``` tag that looks like a legitimate login form. The form is set up to submit the entered username and password to the attacker's website (http://attacker.com/steal) when the user clicks the "Login" button.  
 
 When the user views the page and enters their login credentials, they will unknowingly submit them to the attacker's website instead of the legitimate website. The attacker can then use the stolen credentials to access the victim's account and carry out further attacks.
