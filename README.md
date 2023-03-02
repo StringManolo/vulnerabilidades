@@ -1,6 +1,6 @@
 # Vulnerabilities
 
-### htmli
+## htmli
 
 ##### description  
 HTML Injection (HTMLi) is a vulnerability that occurs when an attacker is able to inject HTML code into a web page by exploiting a weakness in the input validation process. This can happen, for example, if a web application does not properly validate user input or if it allows users to submit data that includes HTML tags that can be executed on the page.  
@@ -48,3 +48,7 @@ To fix this vulnerability, we need to properly validate and filter the user inpu
 
 In this updated code, we use the ```htmlspecialchars``` function to filter out any HTML tags and special characters that could be used to inject malicious code. The ```ENT_QUOTES``` flag is used to ensure that both single and double quotes are properly escaped, and the ```'UTF-8'``` parameter specifies the character encoding to use. This helps prevent HTML injection and other types of code injection attacks.
 
+## cssi
+
+##### description  
+CSSI or CSS Injection is a type of attack that involves injecting malicious CSS code into a website or web application. CSS is responsible for the layout and styling of a website. By injecting malicious CSS code, an attacker can modify the appearance and behavior of a website, potentially compromising the security and privacy of users.
