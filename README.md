@@ -87,4 +87,6 @@ An attacker could use CSS injection to modify the appearance of the comments sec
 
 This code would hide all comments on the page, except for the attacker's comment, which would be displayed with a modified username and message. The message would be set using the ```"data-comment"``` attribute of the comment element, which would be populated with the user's input. In this way, the attacker could inject arbitrary comments into the website and potentially trick users into clicking on malicious links or divulging personal information.
 
-To prevent CSS injection attacks like this, web developers should implement input validation and sanitization techniques to prevent untrusted data from being processed and displayed on the website. Additionally, website owners should educate their users on safe browsing practices and encourage them to report suspicious behavior.
+To prevent CSS injection attacks like this, web developers should implement input validation and sanitization techniques to prevent untrusted data from being processed and displayed on the website. Additionally, website owners should educate their users on safe browsing practices and encourage them to report suspicious behavior.  
+  
+##### fix
