@@ -55,6 +55,7 @@ CSSI or CSS Injection is a type of attack that involves injecting malicious CSS 
 
 Let's say there's a website that allows users to submit comments on articles. The website displays the comments in a section below the article, with each comment being represented by an HTML element.  
   
+##### example
 Here is an example of the webpage:
 ```html
 <div class="comment">
@@ -63,6 +64,7 @@ Here is an example of the webpage:
 </div>
 ```
 
+##### code of vulnerability
 An attacker could use CSS injection to modify the appearance of the comments section by injecting malicious CSS code into the comment submission form. For example, they could inject the following CSS code:
 ```css
 .comment {
@@ -83,6 +85,6 @@ An attacker could use CSS injection to modify the appearance of the comments sec
 }
 ```
 
-This code would hide all comments on the page, except for the attacker's comment, which would be displayed with a modified username and message. The message would be set using the "data-comment" attribute of the comment element, which would be populated with the user's input. In this way, the attacker could inject arbitrary comments into the website and potentially trick users into clicking on malicious links or divulging personal information.
+This code would hide all comments on the page, except for the attacker's comment, which would be displayed with a modified username and message. The message would be set using the ```"data-comment"``` attribute of the comment element, which would be populated with the user's input. In this way, the attacker could inject arbitrary comments into the website and potentially trick users into clicking on malicious links or divulging personal information.
 
 To prevent CSS injection attacks like this, web developers should implement input validation and sanitization techniques to prevent untrusted data from being processed and displayed on the website. Additionally, website owners should educate their users on safe browsing practices and encourage them to report suspicious behavior.
