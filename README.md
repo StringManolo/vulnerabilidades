@@ -90,3 +90,32 @@ This code would hide all comments on the page, except for the attacker's comment
 To prevent CSS injection attacks like this, web developers should implement input validation and sanitization techniques to prevent untrusted data from being processed and displayed on the website. Additionally, website owners should educate their users on safe browsing practices and encourage them to report suspicious behavior.  
   
 ##### fix
+To fix this vulneravility we need to validate the input on server side:
+```javascript
+// Import the DOMPurify library
+const DOMPurify = require("dompurify");
+
+// Route to handle user comments
+app.post("/comments", (req, res) => {
+  // Get the user's comment from the request body
+  const comment = req.body.comment;
+
+  // Sanitize the comment using DOMPurify
+  const cleanComment = DOMPurify.sanitize(comment);
+
+  // Validate the comment
+  if (!cleanComment.trim()) {
+    // If the comment is empty or contains only whitespace, return an error response
+    return res.status(400).send("Comment cannot be empty");
+  }
+
+  // Save the sanitized comment to the database
+  // ...
+});
+```
+
+In this example, we're importing the DOMPurify library and using it to sanitize the user's comment on the server-side. We then check if the sanitized comment is empty or contains only whitespace characters, and return an error response if it does. If the comment is valid, we can save it to the database.  
+
+
+
+
